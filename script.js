@@ -1,6 +1,7 @@
+// python -m http.server
+
 let NUM = Math.floor(Math.random() * 100);
 
-let testArr = [4,7,6,9,2,1,3];
 
 function stupidSearch(){
 
@@ -10,7 +11,7 @@ function binarySearch() {
   while(true) {
 
     let guess = document.getElementById("guess").value;
-    document.getElementById("output").innerHTML = guess;
+    document.getElementById("output_binary").innerHTML += guess;
     console.log(guess)
     console.log(NUM)
 
@@ -21,7 +22,7 @@ function binarySearch() {
 //sort test array using Bubble Sort
 function bubbleSort(arr) {
 
-document.getElementById("output").innerHTML = testArray
+document.getElementById("output_bubble").innerHTML += arr
 /*  Bubble Sort pseudo code
 
     for i from 0 to len
@@ -29,14 +30,14 @@ document.getElementById("output").innerHTML = testArray
         if a[j] > a[j+1]
           swap(a[j],a[j+1])
 */    
-document.getElementById("output").innerHTML = testArray
+document.getElementById("output_bubble").innerHTML += arr
 
 }
 
 //sort test array using selection sort
 function selectionSort(arr) {
 
-  document.getElementById("output").innerHTML = testArray
+  document.getElementById("output_selection").innerHTML += arr
 
 
 /*  Selection Sort pseudo code
@@ -55,18 +56,18 @@ function selectionSort(arr) {
         swap(arr,a[min],a[i])
 */ 
 
-  document.getElementById("output").innerHTML = testArray
+  document.getElementById("output_selection").innerHTML += arr
 
 }
   
 
 function testAll() {
-  var arr = [-.1,4,7,6,1651,234,5,-18,9,2,3];
+  let arr = [-.1,4,7,6,1651,234,5,-18,9,2,3];
   console.log(stupidSearch());
   console.log(selectionSort(arr));
   console.log(bubbleSort(arr));
 }
-testAll();
+
 
 
 //HL Only: recursive binarySearch
